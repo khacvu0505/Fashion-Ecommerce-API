@@ -1,22 +1,30 @@
 const express = require("express");
 const router = express.Router();
-const { VerifyTokenAndAdmin } = require("../controllers/VerifyToken");
+const {
+  VerifyTokenAndAdmin,
+  VerifyToken,
+  VerifyTokenAndAuthorization,
+} = require("../controllers/VerifyToken");
 // Controller
 const CartController = require("../controllers/Cart");
 
-// Create Product
-router.post("", VerifyTokenAndAdmin, ProductController.CreateProduct);
+// Create Cart
+router.post("", VerifyToken, CartController.CreateCart);
 
-// Update Product
-router.put("/:id", VerifyTokenAndAdmin, ProductController.UpdateProduct);
+// Update Cart
+router.put("/:id", VerifyTokenAndAuthorization, CartController.UpdateCart);
 
-// Delete Product
-router.delete("/:id", VerifyTokenAndAdmin, ProductController.DeleteProduct);
+// Delete Cart
+router.delete("/:id", VerifyTokenAndAuthorization, CartController.DeleteCart);
 
-// Get Product
-router.get("/find/:id", ProductController.GetProduct);
+// Get User Cart
+router.get(
+  "/find/:userId",
+  VerifyTokenAndAuthorization,
+  CartController.GetCart
+);
 
-// Get All Products
-router.get("/", ProductController.GetAllProduct);
+// Get All
+router.get("/", VerifyTokenAndAdmin, CartController.GetAll);
 
 module.exports = router;
