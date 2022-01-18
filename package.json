@@ -1,0 +1,28 @@
+{
+  "name": "fashion-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khacvu0505/Fashion-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khacvu0505/Fashion-API/issues"
+  },
+  "homepage": "https://github.com/khacvu0505/Fashion-API#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dotenv": "^12.0.4",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.6",
+    "nodemon": "^2.0.15"
+  }
+}
