@@ -12,6 +12,6 @@ router.use("/auth", authRoutes);
 router.use("/user", userRoutes);
 
 // Product
-// router.use("/products", productRoutes);
+router.use("/products", productRoutes);
 
 module.exports = router;
