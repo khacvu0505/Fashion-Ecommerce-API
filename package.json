@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/khacvu0505/Fashion-API#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "dotenv": "^12.0.4",
     "express": "^4.17.2",
